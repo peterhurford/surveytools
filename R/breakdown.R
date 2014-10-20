@@ -13,7 +13,7 @@
 #' @export
 breakdown <- function(var, seq, data) {
   sapply(seq, function(x) {
-    y <- as.numeric(fetch(var, data = data))
+    y <- as.numeric(fetch_var(var, data = data))
     print(paste(x, length(y[y > x]), collapse = ':'))
   })
   NULL
