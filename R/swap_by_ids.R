@@ -9,8 +9,8 @@
 #'
 #' @param data.  The data to be transformed.  This is assumed to be a three
 #' column melted dataframe, using reshape2 <http://cran.r-project.org/web/packages/reshape2/index.html>.
-#' The first column should contain IDs, the second column should contain variable names,
-#' and the third column should contain variable values.
+#' The first column should contain IDs, the second column should contain variable
+#' names, and the third column should contain variable values.
 #' @export
 swap_by_ids <- function(swap_list, variable, data) {
   sapply(names(swap_list), function(id) {

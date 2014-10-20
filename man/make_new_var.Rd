@@ -12,8 +12,9 @@ make_new_var(new_var_name, definition, data)
 
 \item{definition}{numeric or character.  The values for the new variable.}
 
-\item{data.}{The data to be transformed.  This is assumed to be a three
-column melted dataframe, using reshape2 <http://cran.r-project.org/web/packages/reshape2/index.html>.
+\item{data.}{The data to which the new variable will be added. This is
+assumed to be a three column melted dataframe, using reshape2
+<http://cran.r-project.org/web/packages/reshape2/index.html>.
 The first column should contain IDs, the second column should contain variable
 names, and the third column should contain variable values.}
 }

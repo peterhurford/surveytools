@@ -4,8 +4,9 @@
 #' @param new_var_name character.  The desired name of the new variable.
 #' @param definition numeric or character.  The values for the new variable.
 #'
-#' @param data.  The data to be transformed.  This is assumed to be a three
-#' column melted dataframe, using reshape2 <http://cran.r-project.org/web/packages/reshape2/index.html>.
+#' @param data.  The data to which the new variable will be added. This is
+#' assumed to be a three column melted dataframe, using reshape2
+#' <http://cran.r-project.org/web/packages/reshape2/index.html>.
 #' The first column should contain IDs, the second column should contain variable
 #' names, and the third column should contain variable values.
 #' @export
