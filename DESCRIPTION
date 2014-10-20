@@ -1,5 +1,5 @@
 Package: surveytools
-Title: What the package does (short line)
+Title: Surveytools is a collection of R functions that, together, create a lightweight and modern workflow for analyzing survey data.
 Version: 0.1
 Authors@R: "First Last <first.last@example.com> [aut, cre]"
 Description: What the package does (paragraph)
