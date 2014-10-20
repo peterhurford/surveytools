@@ -188,7 +188,7 @@ breakdown(age, seq(10, 90, by = 10), data = data)
 [1] "70 7"
 [1] "80 6"
 [1] "90 6"
-
+```
 
 ## Examples
 
