@@ -97,6 +97,7 @@ data <- swap_multiple_ids(
   variable = 'country',
   data = data
 )
+```
 
 ...and make new variables from old ones
 ```R
