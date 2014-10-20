@@ -116,31 +116,57 @@ data <- make_new_var('continent',
 This is where you want to spend most of your time.  But there are some tools here to make analysis easier too.
 
 You can grab values from the data...
+
 `fetch_var('age', data = data)`
 
+-
+
 You can get data for a particular id...
+
 (Get the age of person with id #36)
+
 `fetch_var('age', by_id = 36, data = data)`
 
+-
+
 You can see how many people have a particular value...
+
 (See how many people live in France)
+
 `length(fetch_var('country', select = 'France', data = data))`
 
+-
+
 You can get the ids of all the people with a particular value...
+
 (Find the ids of everyone who lives in France)
+
 `fetch_var('country', select = 'France', col = 1, data = data)`
 
+-
+
 You can get means, median, modes, sums, standard deviations...
+
 (Get mean and standard deviation for age)
+
 `fn_on_df(fetch_var('age', data = data), 'mean')`
+
 `fn_on_df(fetch_var('age', data = data), 'sd')`
 
+-
+
 You can get the values of one variable where another variable has a particular value...
+
 (See the student status of all people who live in France)
+
 `fetch_var_by('student', 'country', 'France', data = data)`
 
+-
+
 And you can get a breakdown of a variable to see, for every value, how many people have that value or a higher value.
+
 (See the breakdown of age)
+
 ```R
 breakdown(age, seq(10, 90, by = 10), data = data)
 [1] "10 630"
