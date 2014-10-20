@@ -34,7 +34,6 @@ median(numeric_ages[!is.na(numeric_ages)])
 
 ...Instead, write...
 `fn_on_df(fetch_var('age', data = imdata), mean)`
-```
 
 
 ## Installation
