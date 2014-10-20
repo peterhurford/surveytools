@@ -34,6 +34,17 @@ median(numeric_ages[!is.na(numeric_ages)])
 
 ...Instead, write...
 `fn_on_df(fetch_var('age', data = imdata), mean)`
+```
+
+
+## Installation
+
+This package is not yet available from CRAN. To install the latest development builds directly from GitHub, run this instead:
+
+```R
+if (!require("devtools")) install.packages("devtools")
+devtools::install_github('peterhurford', 'surveytools')
+```
 
 
 ## The Workflow
@@ -178,14 +189,8 @@ breakdown(age, seq(10, 90, by = 10), data = data)
 [1] "70 7"
 [1] "80 6"
 [1] "90 6"
-```
 
 
-## Installation
+## Examples
 
-This package is not yet available from CRAN. To install the latest development builds directly from GitHub, run this instead:
-
-```R
-if (!require("devtools")) install.packages("devtools")
-devtools::install_github('peterhurford', 'surveytools')
-```
+* [The .impact survey](https://github.com/peterhurford/imsurvey/blob/master/imsurvey.R)
