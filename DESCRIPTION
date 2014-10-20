@@ -1,8 +1,8 @@
 Package: surveytools
 Title: Surveytools is a collection of R functions that, together, create a lightweight and modern workflow for analyzing survey data.
 Version: 0.1
-Authors@R: "First Last <first.last@example.com> [aut, cre]"
-Description: What the package does (paragraph)
+Authors@R: "Peter Hurford <peter@peterhuford.com> [aut, cre]"
+Description: See title.
 Depends: R (>= 3.1.1)
-License: What license is it under?
+License: MIT <http://opensource.org/licenses/MIT>
 LazyData: true
