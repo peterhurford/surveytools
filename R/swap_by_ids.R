@@ -3,7 +3,7 @@
 #' perform the desired translation.  Useful in interpolation.
 #'
 #' @param swap_list list. A list mapping ids to the value that id should have
-#' e.g., \code{list(1 = 'cat', 2 = 'dog', 3 = 'dog')
+#' e.g., \code{list(1 = 'cat', 2 = 'dog', 3 = 'dog')}
 #'
 #' @param variable character. The name of the variable where the replacement occurs.
 #'
