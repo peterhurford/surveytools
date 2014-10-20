@@ -29,7 +29,7 @@ data <- read.csv('survey_responses.csv')
 data <- melt(data, id="Response.ID")
 ```
 
-### Step 3: Clean the Data
+#### Step 3: Clean the Data
 Now here's where we clean stuff up using Surveytools.
 
 You can do things like make nice, crisp variable names...
@@ -56,8 +56,11 @@ data <- swap_by_id(list(
   '11' = 'UK',
   '12' = 'France'
 ), 'country', data = data)
+```
 
 ...and make new variables
+
+TODO: Finish
 
 
 ## Installation
