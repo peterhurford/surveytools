@@ -22,11 +22,10 @@
 fetch_var <- function(var_name, data, col = 3, by_id = 0, select = NULL, na.rm = TRUE) {
   if (by_id != 0) data <- data[data[[1]] == by_id,]
   if (!is.null(select)) data <- data[data[[3]] == select,]
-  if (!identical(col, 'all')) {
-    output <- data[data[[2]] == var_name, col]
+  output <- if (!identical(col, 'all')) {
+    data[data[[2]] == var_name, col]
   } else {
-    output <- data[data[[2]] == var_name, ]
-    na.rm = FALSE
+    data[data[[2]] == var_name, ]
   }
   if (isTRUE(na.rm)) output <- output[!is.na(output) & output != "" & output != "NA" & output != "N/A"]
   output
