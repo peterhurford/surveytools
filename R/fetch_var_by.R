@@ -12,6 +12,6 @@
 #' \code{fetch_var_by(favorite_food, home_city, 'Paris', data)}
 #' @export
 fetch_var_by <- function(first_var, by_var, select, data) {
-  ids <- fetch(by_var, select = select, data = data, col = 1)
+  ids <- fetch_var(by_var, select = select, data = data, col = 1)
   data[data[[1]] %in% ids & data[[2]] == first_var, 3]
 }
