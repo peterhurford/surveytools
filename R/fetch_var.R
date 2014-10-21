@@ -26,9 +26,9 @@ fetch_var <- function(var_name, data, col = 3, by_id = 0, select = NULL, na.rm =
     output <- data[data[[2]] == var_name, col]
   } else {
     output <- data[data[[2]] == var_name, ]
+    output <- output[!is.na(output[[1]]), ]
     na.rm = FALSE
   }
-  output <- output[!is.na(output[[1]])]
   if (isTRUE(na.rm)) output <- output[!is.na(output) & output != "" & output != "NA" & output != "N/A"]
   output
 }
