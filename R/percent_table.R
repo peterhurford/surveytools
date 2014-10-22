@@ -6,12 +6,11 @@
 #' @param na.rm logical. Remove all the NA, "N/A", or "" values. On by default.
 #' @export
 percent_table <- function(df, round = NULL, na.rm = TRUE) {
+  if (na.rm) df <- df[!df[[3]] == "" & !df[[3]] == "N/A" & !is.na(df[[3]]),]
   sapply(unique(df[[3]]), function(x) {
-    if (!na.rm | (!is.na(x) & !is.null(x) & !identical(x, "") & !identical(x, "N/A"))) {
-      percent <- length(df[df[[3]] == x,3]) / length(df[[3]]) * 100
-      if (!is.null(round)) percent <- round(percent, digits = round)
-      print(paste0(x, ": ", percent, "%"))
-    }
+    percent <- length(df[df[[3]] == x,3]) / length(df[[3]]) * 100
+    if (!is.null(round)) percent <- round(percent, digits = round)
+    print(paste0(x, ": ", percent, "%"))
   })
   NULL
 }
