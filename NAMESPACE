@@ -2,9 +2,12 @@
 
 export(breakdown)
 export(define_variables)
+export(fetch_percent_table)
 export(fetch_var)
 export(fetch_var_by)
 export(fn_on_df)
 export(make_new_var)
+export(percent_table)
 export(swap_by_ids)
 export(swap_by_value)
+export(swap_multiple_ids)
