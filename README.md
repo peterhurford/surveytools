@@ -179,7 +179,7 @@ And you can get a table of all the values of a variable and their percentages.
 (See the percent student/non-student)
 
 ```R
-percentage_table('student', data = imdata, round = 0)
+fetch_percentage_table('student', data = imdata, round = 0)
 [1] "Yes" 51%
 [1] "No" 49%
 ```
