@@ -7,5 +7,5 @@
 #' @param round integer. How many digits you want to round percentages to. Default no rounding.
 #' @export
 fetch_percent_table <- function(var, data, round = NULL) {
-  percent_table(fetch_var(var, data = data, col = 'all'))
+  percent_table(fetch_var(var, data = data, col = 'all'), round = round)
 }
