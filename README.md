@@ -29,7 +29,7 @@ And instead of writing the following ugly code to get the mean age...
 ```R
 age = data$Your.age
 numeric_ages <- as.numeric(age[!is.na(age) & age != ""])
-median(numeric_ages[!is.na(numeric_ages)])
+mean(numeric_ages[!is.na(numeric_ages)])
 ```
 
 ...Instead, write...
@@ -170,6 +170,20 @@ You can get the values of one variable where another variable has a particular v
 (See the student status of all people who live in France)
 
 `fetch_var_by('student', 'country', 'France', data = data)`
+
+
+-
+
+And you can get a table of all the values of a variable and their percentages.
+
+(See the percent student/non-student)
+
+```R
+percentage_table('student', data = imdata, round = 0)
+[1] "Yes" 51%
+[1] "No" 49%
+```
+
 
 -
 
