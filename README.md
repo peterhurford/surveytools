@@ -163,6 +163,14 @@ You can also do greater than / less than selections...
 
 -
 
+You can also fetch values within a particular (inclusive numeric) range...
+
+(Find the number of people ages 9-18)
+
+`length(fetch_var_in_range('age', 9, 18, data = data))`
+
+-
+
 You can get means, median, modes, sums, standard deviations...
 
 (Get mean and standard deviation for age)
