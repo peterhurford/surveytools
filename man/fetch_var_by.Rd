@@ -4,14 +4,13 @@
 \alias{fetch_var_by}
 \title{Fetches the values of one variable where a second variable is a certain value.}
 \usage{
-fetch_var_by(first_var, by_var, select, col = 3, data)
+fetch_var_by(var, select_list, col = 3, data)
 }
 \arguments{
-\item{first_var}{character. The name of the variable you want values returned for.}
+\item{var}{character. The name of the variable you want values returned for.}
 
-\item{by_var}{character. The name of the variable you want to sort by.}
-
-\item{select.}{The value by_var should be.}
+\item{select_list.}{A list of all subselections, with the name of the variable to
+subselect by and the value it should be (e.g., \code{list('student' = 'Yes')})}
 
 \item{col.}{3 (default) to grap values, 2 to grab the variable name, 1 to grab
 the ids, or 'all' to grab the entire data frame for that variable.}

@@ -4,18 +4,22 @@
 \alias{fetch_var}
 \title{Fetches values from a melted data frame.}
 \usage{
-fetch_var(var_name, data, col = 3, by_id = 0, select = NULL,
-  na.rm = TRUE)
+fetch_var(var_name, compare = "==", select = NULL, by_id = -1, col = 3,
+  na.rm = TRUE, data)
 }
 \arguments{
 \item{var_name}{character. The name of the variable within the data frame to
 select values from.}
 
-\item{by_id}{character. The ID of a particular person, if you only want data from
-that one person. Off by default.}
+\item{compare}{character. An operator to compare to the select parameter, if
+chosen (e.g., "==", ">", ">=", etc.).  == by default if select is chosen.}
 
 \item{select}{character. Returns only values that match this value. Useful for
-counting. Off by default.}
+counting. Off by default.
+the ids, or 'all' to grab the entire data frame for that variable.}
+
+\item{by_id}{character. The ID of a particular person, if you only want data from
+that one person. Off by default.}
 
 \item{na.rm}{logical. Remove all the NA, "N/A", or "" values. On by default.}
 
@@ -24,8 +28,7 @@ melted dataframe, using reshape2 <http://cran.r-project.org/web/packages/reshape
 The first column should contain IDs, the second column should contain variable
 names, and the third column should contain variable values.}
 
-\item{col.}{3 (default) to grap values, 2 to grab the variable name, 1 to grab
-the ids, or 'all' to grab the entire data frame for that variable.}
+\item{col.}{3 (default) to grap values, 2 to grab the variable name, 1 to grab}
 }
 \description{
 Fetches values from a melted data frame.

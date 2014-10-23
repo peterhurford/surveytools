@@ -4,13 +4,15 @@
 \alias{percent_table}
 \title{Prints a percent table.}
 \usage{
-percent_table(df, round = NULL)
+percent_table(df, round = NULL, na.rm = TRUE)
 }
 \arguments{
 \item{df}{data frame. The data frame of the variable to run the table for.  This dataframe is still assumed
 to be three column (id, variable name, value), but could be the result of a fetch_var() or fetch_var_by()}
 
 \item{round}{integer. How many digits you want to round percentages to. Default no rounding.}
+
+\item{na.rm}{logical. Remove all the NA, "N/A", or "" values. On by default.}
 
 \item{var}{characer. The name of the variable you want percent breakdown for.}
 }
