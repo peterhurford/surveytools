@@ -155,6 +155,14 @@ You can get the ids of all the people with a particular value...
 
 -
 
+You can also do greater than / less than selections...
+
+(Find the values of all ages over 25)
+
+`fetch_var('age', '>', 25, data = data)`
+
+-
+
 You can get means, median, modes, sums, standard deviations...
 
 (Get mean and standard deviation for age)
