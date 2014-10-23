@@ -175,9 +175,9 @@ You can get means, median, modes, sums, standard deviations...
 
 (Get mean and standard deviation for age)
 
-`fn_on_df(fetch_var('age', data = data), 'mean')`
+`fn_on_df(fetch_var('age', data = data), mean)`
 
-`fn_on_df(fetch_var('age', data = data), 'sd')`
+`fn_on_df(fetch_var('age', data = data), sd)`
 
 -
 
