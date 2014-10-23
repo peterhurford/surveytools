@@ -169,7 +169,7 @@ You can get the values of one variable where another variable has a particular v
 
 (See the student status of all people who live in France)
 
-`fetch_var_by('student', 'country', 'France', data = data)`
+`fetch_var_by('student', list('country', 'France'), data = data)`
 
 
 -
