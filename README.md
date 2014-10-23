@@ -157,9 +157,9 @@ You can get the ids of all the people with a particular value...
 
 You can also do greater than / less than selections...
 
-(Find the values of all ages over 25)
+(Find the number of people older than 25)
 
-`fetch_var('age', '>', 25, data = data)`
+`length(fetch_var('age', '>', 25, data = data))`
 
 -
 
