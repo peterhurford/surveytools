@@ -51,12 +51,13 @@ devtools::install_github('peterhurford', 'surveytools')
 With the Surveytools workflow, you separate your R file into X steps:
 
 #### Step 1: Define Libraries
-At minimum, you'll need `reshape2` and `surveytools`.
+At minimum, you'll need `reshape2`, `devtools`, and `surveytools`.
 
 ```R
 ### Libraries
 if (!require(reshape2)) install.packages('reshape2'); require(reshape2)
-if (!require(surveytools)) install_github('peterhurford/surveytools');
+if (!require(devtools)) install.packages('devtools'); require(devtools)
+if (!require(surveytools)) install_github('peterhurford/surveytools'); require(surveytools)
 ```
 
 #### Step 2: Read the Data
