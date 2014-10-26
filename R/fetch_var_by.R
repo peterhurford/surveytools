@@ -16,7 +16,7 @@
 #' e.g., to return the favorite food of people from the city of Paris:
 #' \code{fetch_var_by(favorite_food, home_city, 'Paris', data)}
 #' @export
-fetch_var_by <- function(var, select_list, col = 3, data) {
+fetch_var_by <- function(var, select_list, col = 3, data = get_data()) {
   ids <- unique(data[[1]])
   sapply(names(select_list), function(x) {
     ids <<- base:::intersect(

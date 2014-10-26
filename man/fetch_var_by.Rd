@@ -4,7 +4,7 @@
 \alias{fetch_var_by}
 \title{Fetches the values of one variable where a second variable is a certain value.}
 \usage{
-fetch_var_by(var, select_list, col = 3, data)
+fetch_var_by(var, select_list, col = 3, data = get_data())
 }
 \arguments{
 \item{var}{character. The name of the variable you want values returned for.}

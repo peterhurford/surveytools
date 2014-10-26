@@ -4,7 +4,7 @@
 \alias{fetch_percent_table}
 \title{Runs percent_table for melted data frames.}
 \usage{
-fetch_percent_table(var, data, round = NULL)
+fetch_percent_table(var, data = get_data(), round = NULL)
 }
 \arguments{
 \item{var}{characer.  The name of the variable you want percent breakdown for.}

@@ -5,7 +5,7 @@
 \title{Fetches values from a melted data frame.}
 \usage{
 fetch_var(var_name, compare = "==", select = NULL, by_id = -1, col = 3,
-  na.rm = TRUE, data)
+  na.rm = TRUE, data = get_data())
 }
 \arguments{
 \item{var_name}{character. The name of the variable within the data frame to

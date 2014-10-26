@@ -10,7 +10,7 @@
 #' The first column should contain IDs, the second column should contain variable
 #' names, and the third column should contain variable values.
 #' @export
-fetch_var_in_range <- function(var, min, max, data) {
+fetch_var_in_range <- function(var, min, max, data = get_data()) {
   result <- fetch_var(var, data = data)
   result[as.numeric(result) >= min & as.numeric(result) <= max & !is.na(as.numeric(result))]
 }

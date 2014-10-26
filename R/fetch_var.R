@@ -23,7 +23,7 @@
 #' @param col. 3 (default) to grap values, 2 to grab the variable name, 1 to grab
 #' @export
 fetch_var <- function(var_name, compare = '==', select = NULL, by_id = -1, col
- = 3, na.rm = TRUE, data)
+ = 3, na.rm = TRUE, data = get_data())
  {
   if (by_id != -1) data <- data[data[[1]] == by_id,]
   if (!is.null(select)) {

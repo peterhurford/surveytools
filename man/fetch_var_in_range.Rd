@@ -4,7 +4,7 @@
 \alias{fetch_var_in_range}
 \title{Fetches values from a melted data frame that are within a particular range.}
 \usage{
-fetch_var_in_range(var, min, max, data)
+fetch_var_in_range(var, min, max, data = get_data())
 }
 \arguments{
 \item{var}{character. The name of the variable within the data frame to

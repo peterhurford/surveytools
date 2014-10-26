@@ -12,7 +12,7 @@
 #' The first column should contain IDs, the second column should contain variable
 #' names, and the third column should contain variable values.
 #' @export
-swap_by_ids <- function(swap_list, variable, data) {
+swap_by_ids <- function(swap_list, variable, data = get_data()) {
   sapply(names(swap_list), function(id) {
     data[data[[1]] == id & data[[2]] == variable & !is.na(data[[1]]), 3] <<- swap_list[[id]]
   })

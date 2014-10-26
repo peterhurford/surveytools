@@ -6,7 +6,7 @@
 this will make the value of that variable at all those ids into the given value.
 Useful in interpolation.}
 \usage{
-swap_multiple_ids(ids, value, variable, data)
+swap_multiple_ids(ids, value, variable, data = get_data())
 }
 \arguments{
 \item{ids}{vector. A list of ids to swap.}

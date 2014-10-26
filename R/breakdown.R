@@ -11,7 +11,7 @@
 #' are age 5 or older, how many people are age 10 or older, how many people are
 #' age 15 or older, etc. to age 90.
 #' @export
-breakdown <- function(var, seq, data) {
+breakdown <- function(var, seq, data = get_data()) {
   sapply(seq, function(x) {
     y <- as.numeric(fetch_var(var, data = data))
     print(paste(x, length(y[y > x]), collapse = ':'))

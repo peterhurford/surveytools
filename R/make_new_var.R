@@ -10,7 +10,7 @@
 #' The first column should contain IDs, the second column should contain variable
 #' names, and the third column should contain variable values.
 #' @export
-make_new_var <- function(new_var_name, definition, data) {
+make_new_var <- function(new_var_name, definition, data = get_data()) {
   df <- data.frame(unique(data[[1]]), new_var_name, definition)
   colnames(df) <- c(names(data)[[1]], names(data)[[2]], names(data)[[3]])
   rbind(data, df)

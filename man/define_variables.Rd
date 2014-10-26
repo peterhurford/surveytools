@@ -5,7 +5,7 @@
 \title{Define the variable names for the project by converting ugly data names into
 the names you want to use for functions like fetch().}
 \usage{
-define_variables(definition_list, data)
+define_variables(definition_list, data = get_data())
 }
 \arguments{
 \item{definition_list}{list. A list that maps the new variable name to the old

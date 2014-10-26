@@ -5,7 +5,7 @@
 \title{Given a melted data frame and a definition for the new variable, create
 that new variable added onto the melted data frame.}
 \usage{
-make_new_var(new_var_name, definition, data)
+make_new_var(new_var_name, definition, data = get_data())
 }
 \arguments{
 \item{new_var_name}{character.  The desired name of the new variable.}

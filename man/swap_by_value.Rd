@@ -6,7 +6,7 @@
 data frame mapped to a list of what you want the values to be, this method
 will swap the values.  Useful for shortening up or cleaning data.}
 \usage{
-swap_by_value(swap_list, variable, data)
+swap_by_value(swap_list, variable, data = get_data())
 }
 \arguments{
 \item{swap_list}{list. A list mapping current values to what they should be.

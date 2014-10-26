@@ -5,7 +5,7 @@
 \title{Breakdown values of a variable by the number of people who have that value or
 a higher value.}
 \usage{
-breakdown(var, seq, data)
+breakdown(var, seq, data = get_data())
 }
 \arguments{
 \item{var}{character. The value to breakdown.}

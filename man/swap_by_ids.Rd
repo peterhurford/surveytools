@@ -6,7 +6,7 @@
 be for a given variable, and the name of that variable in the dataframe,
 perform the desired translation.  Useful in interpolation.}
 \usage{
-swap_by_ids(swap_list, variable, data)
+swap_by_ids(swap_list, variable, data = get_data())
 }
 \arguments{
 \item{swap_list}{list. A list mapping ids to the value that id should have

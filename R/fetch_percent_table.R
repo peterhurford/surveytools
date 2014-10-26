@@ -6,6 +6,6 @@
 #' names, and the third column should contain variable values.
 #' @param round integer. How many digits you want to round percentages to. Default no rounding.
 #' @export
-fetch_percent_table <- function(var, data, round = NULL) {
+fetch_percent_table <- function(var, data = get_data(), round = NULL) {
   percent_table(fetch_var(var, data = data, col = 'all'), round = round)
 }

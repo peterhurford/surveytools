@@ -9,7 +9,7 @@
 #' The first column should contain IDs, the second column should contain variable
 #' names, and the third column should contain variable values.
 #' @export
-define_variables <- function(definition_list, data) {
+define_variables <- function(definition_list, data = get_data()) {
   data[[2]] <- Reduce(function(v,i) {
     gsub(
       fixed = TRUE,
