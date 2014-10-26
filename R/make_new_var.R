@@ -13,5 +13,7 @@
 make_new_var <- function(new_var_name, definition, data = get_data()) {
   df <- data.frame(unique(data[[1]]), new_var_name, definition)
   colnames(df) <- c(names(data)[[1]], names(data)[[2]], names(data)[[3]])
-  rbind(data, df)
+  data <- rbind(data, df)
+  set_data(data)
+  data
 }

@@ -16,5 +16,6 @@ swap_by_ids <- function(swap_list, variable, data = get_data()) {
   sapply(names(swap_list), function(id) {
     data[data[[1]] == id & data[[2]] == variable & !is.na(data[[1]]), 3] <<- swap_list[[id]]
   })
+  set_data(data)
   data
 }

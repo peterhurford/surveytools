@@ -20,5 +20,6 @@ define_variables <- function(definition_list, data = get_data()) {
     seq_along(definition_list),
     data[[2]]
   )
+  set_data(data)
   data
 }
