@@ -35,8 +35,7 @@ fetch_var <- function(var_name, compare = '==', select = NULL, by_id = -1, col
       ))
     }
   }
-  if (na.rm) data <- data[data[[3]] != "" & data[[3]] != "N/A" & !is.na(data[[3]]
-),]
+  if (na.rm) data <- na.rm(data)
   if (!identical(col, 'all')) {
     output <- data[data[[2]] == var_name, col]
   } else {
