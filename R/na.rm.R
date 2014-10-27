@@ -6,6 +6,4 @@
 #' @export
 na.rm <- function(data) {
   data <- data[!is.na(data[[3]]) & data[[3]] != "" & data[[3]] != "NA" & data[[3]] != "N/A" & data[[3]] != "", ]
-  set_data(data)
-  data
 }                                                                                 
