@@ -21,7 +21,7 @@ data <- swap_by_value(list(
   'UK' = 'Scotland',
   'UK' = 'England' 
   'UK' = 'Wales'
-), 'country', data = data)
+), 'country')
 ```
 
 And instead of writing the following ugly code to get the mean age...
@@ -67,7 +67,8 @@ The goal here is to get the data and then create a melted data frame, which is a
 ### Read Data
 setwd('~/dev/survey')
 data <- read.csv('survey_responses.csv')
-data <- melt(data, id="Response.ID")
+data <- melt(data, id="Response.ID") # Make a melted dataframe.
+set_data(data)  # Tell surveytools which dataset to use.
 ```
 
 #### Step 3: Clean the Data
@@ -80,7 +81,7 @@ data <- define_variables(list(
   'id' = 'Response.ID',
   'age' = 'What.is.your.age',
   'country' = 'Where.do.you.live'
-), data = data)
+))
 ```
 
 ...clean up values
@@ -89,7 +90,7 @@ data <- swap_by_value(list(
   'UK' = 'Scotland',
   'UK' = 'England' 
   'UK' = 'Wales'
-), 'country', data = data)
+), 'country')
 ```
 
 ...interpolate data by id
@@ -97,7 +98,7 @@ data <- swap_by_value(list(
 data <- swap_by_ids(list(
   '11' = 'UK',
   '12' = 'France'
-), 'country', data = data)
+), 'country')
 ```
 
 ...interpolate one value into multiple ids
@@ -128,7 +129,7 @@ This is where you want to spend most of your time.  But there are some tools her
 
 You can grab values from the data...
 
-`fetch_var('age', data = data)`
+`fetch_var('age')`
 
 -
 
@@ -136,7 +137,7 @@ You can get data for a particular id...
 
 (Get the age of person with id #36)
 
-`fetch_var('age', by_id = 36, data = data)`
+`fetch_var('age', by_id = 36)`
 
 -
 
@@ -144,7 +145,7 @@ You can see how many people have a particular value...
 
 (See how many people live in France)
 
-`length(fetch_var('country', select = 'France', data = data))`
+`length(fetch_var('country', select = 'France'))`
 
 -
 
@@ -152,7 +153,7 @@ You can get the ids of all the people with a particular value...
 
 (Find the ids of everyone who lives in France)
 
-`fetch_var('country', select = 'France', col = 1, data = data)`
+`fetch_var('country', select = 'France', col = 1)`
 
 -
 
@@ -160,7 +161,7 @@ You can also do greater than / less than selections...
 
 (Find the number of people older than 25)
 
-`length(fetch_var('age', '>', 25, data = data))`
+`length(fetch_var('age', '>', 25))`
 
 -
 
@@ -168,7 +169,7 @@ You can also fetch values within a particular (inclusive numeric) range...
 
 (Find the number of people ages 9-18)
 
-`length(fetch_var_in_range('age', 9, 18, data = data))`
+`length(fetch_var_in_range('age', 9, 18))`
 
 -
 
@@ -176,9 +177,9 @@ You can get means, median, modes, sums, standard deviations...
 
 (Get mean and standard deviation for age)
 
-`fn_on_df(fetch_var('age', data = data), mean)`
+`fn_on_df(fetch_var('age'), mean)`
 
-`fn_on_df(fetch_var('age', data = data), sd)`
+`fn_on_df(fetch_var('age'), sd)`
 
 -
 
@@ -186,7 +187,7 @@ You can get the values of one variable where another variable has a particular v
 
 (See the student status of all people who live in France)
 
-`fetch_var_by('student', list('country', 'France'), data = data)`
+`fetch_var_by('student', list('country', 'France'))`
 
 
 -
@@ -209,7 +210,7 @@ And you can get a breakdown of a variable to see, for every value, how many peop
 (See the breakdown of age)
 
 ```R
-breakdown(age, seq(10, 90, by = 10), data = data)
+breakdown(age, seq(10, 90, by = 10))
 [1] "10 630"
 [1] "20 542"
 [1] "30 125"
