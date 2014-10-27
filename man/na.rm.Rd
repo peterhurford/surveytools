@@ -7,8 +7,8 @@
 na.rm(data)
 }
 \arguments{
-\item{data.}{The data to be transformed.  This is assumed to be a three
-column melted dataframe, using reshape2 <http://cran.r-project.org/web/packages/reshape2/index.html>.
+\item{data.}{The data to be transformed.  This is assumed to either be a vector
+or a three column melted dataframe, using reshape2 <http://cran.r-project.org/web/packages/reshape2/index.html>.
 The first column should contain IDs, the second column should contain variable
 names, and the third column should contain variable values.}
 }
