@@ -4,7 +4,7 @@
 \alias{ids}
 \title{Gets the ids of the melted data frame.}
 \usage{
-ids(data)
+ids(data = get_data())
 }
 \arguments{
 \item{data.}{The data to be transformed.  This is assumed to be a three

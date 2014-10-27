@@ -4,4 +4,4 @@
 #' The first column should contain IDs, the second column should contain variable
 #' names, and the third column should contain variable values.
 #' @export
-ids <- function(data) { unique(data[[1]]) }
+ids <- function(data = get_data()) { unique(data[[1]]) }
