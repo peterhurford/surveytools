@@ -5,10 +5,8 @@
 #' names, and the third column should contain variable values.
 #' @export
 na.rm <- function(data) {
-  if(identical(class(data), 'data.frame')) subdata <- data[[3]] else subdata <- data
-  subdata <- subdata[!is.na(subdata) & subdata != "" & subdata != "NA" & subdata != "N/A" & subdata != ""]
-  if(identical(class(data), 'data.frame')) {
-    data[[3]] <- subdata
-    data
-  } else { subdata }
+  data <- if(identical(class(data), 'data.frame'))
+    data[!is.na(data[[3]]) & data[[3]] != "" & data[[3]] != "NA" & data[[3]] != "N/A" & data[[3]] != "", ]
+  else
+    data[!is.na(data) & data != "" & data != "NA" & data != "N/A" & data != ""]
 }                                                                                 
