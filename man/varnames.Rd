@@ -4,7 +4,7 @@
 \alias{varnames}
 \title{Gets the variable names of the melted data frame.}
 \usage{
-varnames(data)
+varnames(data = get_data())
 }
 \arguments{
 \item{data.}{The data to be transformed.  This is assumed to be a three

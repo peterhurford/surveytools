@@ -4,4 +4,4 @@
 #' The first column should contain IDs, the second column should contain variable
 #' names, and the third column should contain variable values.
 #' @export
-varnames <- function(data) { unique(data[[2]]) }
+varnames <- function(data = get_data()) { unique(data[[2]]) }
