@@ -14,7 +14,7 @@
 #' names, and the third column should contain variable values.
 #' @export
 swap_by_value <- function(swap_list, variable, data = get_data()) {
-  sapply(names(swap_list), function(x) {
+  pbsapply(names(swap_list), function(x) {
     data[data[[2]] == variable & data[[3]] == x, 3] <<- swap_list[[x]]
   })
   set_data(data)
