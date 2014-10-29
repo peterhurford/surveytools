@@ -222,6 +222,22 @@ breakdown(age, seq(10, 90, by = 10))
 [1] "90 6"
 ```
 
+-
+
+Lastly, don't leave home without some fancy statistical tests!  Normally, running such tests on dataframes is difficult, because they don't work if the two variables don't have the same length.  But surveytools takes care of all that headache for you.
+
+(See if student status is significantly different by country with a chi-square test.)
+
+`stattest('student', 'country', 'chisquare')`
+
+(See if age is significantly different by student status with a t-test.)
+
+`stattest('age', 'student', 'ttest')`
+
+(See if age is significantly different by country with a linear regression.)
+
+`stattest('age', 'country', 'lm')`
+
 ## Examples
 
 * [The .impact survey](https://github.com/peterhurford/imsurvey/blob/master/imsurvey.R)
