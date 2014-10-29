@@ -17,6 +17,7 @@
 #' @export
 ttest <- function(var, by_var, ignore = NULL, data = get_data()) {
   x <- fetch_var(var, col = 'all')
+  x[[3]] <- as.numeric(x[[3]])
   y <- fetch_var(by_var, col = 'all')
 
   if (!is.null(ignore)) {
@@ -24,9 +25,9 @@ ttest <- function(var, by_var, ignore = NULL, data = get_data()) {
     y[y[[3]] %in% ignore, 3] <- NA
   }
 
-  x <- as.numeric(x)
   x <- na.rm(x)
   y <- na.rm(y)
+  x2 <- x[x[[1]] %in% y[[1]], 3]
   y2 <- y[y[[1]] %in% x[[1]], 3]
-  t.test(x ~ y2)
+  t.test(x2 ~ y2)
 }
