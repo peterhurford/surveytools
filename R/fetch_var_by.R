@@ -5,6 +5,9 @@
 #' @param select_list. A list of all subselections, with the name of the variable to
 #' subselect by and the value it should be (e.g., \code{list('student' = 'Yes')})
 #'
+#' @param compare character. An operator to compare to the select parameter, if
+#' chosen (e.g., "==", ">", ">=", etc.).  == by default if select is chosen.
+#'
 #' @param col. 3 (default) to grap values, 2 to grab the variable name, 1 to grab
 #' the ids, or 'all' to grab the entire data frame for that variable.
 #'
@@ -18,12 +21,12 @@
 #' e.g., to return the favorite food of people from the city of Paris:
 #' \code{fetch_var_by(favorite_food, home_city, 'Paris', data)}
 #' @export
-fetch_var_by <- function(var, select_list, col = 3,
+fetch_var_by <- function(var, select_list, compare = '==', col = 3,
   na.rm = TRUE, data = get_data()) {
     sapply(names(select_list), function(x) {
       ids <<- base:::intersect(
         ids(data),
-        fetch_var(x, select = select_list[[x]],
+        fetch_var(x, select = select_list[[x]], compare = compare,
           na.rm = na.rm, data = data, col = 1)
       )
     })
