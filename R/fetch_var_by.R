@@ -23,9 +23,10 @@
 #' @export
 fetch_var_by <- function(var, select_list, compare = '==', col = 3,
   na.rm = TRUE, data = get_data()) {
+    ids <- ids(data)
     sapply(names(select_list), function(x) {
       ids <<- base:::intersect(
-        ids(data),
+        ids,
         fetch_var(x, select = select_list[[x]], compare = compare,
           na.rm = na.rm, data = data, col = 1)
       )
