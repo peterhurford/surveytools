@@ -5,8 +5,8 @@
 #' @param select_list. A list of all subselections, with the name of the variable to
 #' subselect by and the value it should be (e.g., \code{list('student' = 'Yes')})
 #'
-#' @param compare character. An operator to compare to the select parameter, if
-#' chosen (e.g., "==", ">", ">=", etc.).  == by default if select is chosen.
+#' @param compare character. An operator to determine how the select list is compared
+#' (e.g., "==", ">", ">=", etc.).  == by default if select is chosen.
 #'
 #' @param col. 3 (default) to grap values, 2 to grab the variable name, 1 to grab
 #' the ids, or 'all' to grab the entire data frame for that variable.

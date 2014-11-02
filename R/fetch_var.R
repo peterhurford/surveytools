@@ -29,6 +29,8 @@ fetch_var <- function(var_name, compare = '==', select = NULL, by_id = -1, col
   if (!is.null(select)) {
     data <- if (identical(compare, "==")) {
       data[data[[3]] == select, ]
+    } else if (identical(compare, "!=")) {
+      data[data[[3]] != select, ]
     } else {
       eval(parse(text =
         paste0("data[as.numeric(data[[3]])", compare, select, ",]")
