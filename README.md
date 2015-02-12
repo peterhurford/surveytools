@@ -48,7 +48,7 @@ devtools::install_github('peterhurford', 'surveytools')
 
 ## The Workflow
 
-With the Surveytools workflow, you separate your R file into X steps:
+With the Surveytools workflow, you separate your R file into four steps:
 
 #### Step 1: Define Libraries
 At minimum, you'll need `reshape2`, `devtools`, and `surveytools`.
