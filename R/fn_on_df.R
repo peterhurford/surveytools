@@ -5,6 +5,9 @@
 #'
 #' e.g., the median age would be \code{fn_on_df(fetch('age'), median)}
 #' @export
-fn_on_df <- function(fetch_group, fn, ...) {
-  fn(as.numeric(fetch_group), na.rm = TRUE, ...)
+fn_on_df <- function(fetch_group, fn, na.rm = NULL, ...) {
+  if (c(fn) %in% c(mean, median, sd) && is.null(na.rm))
+    fn(as.numeric(fetch_group), na.rm = TRUE, ...)
+  else
+    fn(as.numeric(fetch_group), ...)
 }
